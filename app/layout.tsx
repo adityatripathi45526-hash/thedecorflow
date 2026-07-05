@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -11,42 +12,41 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-import type { Metadata } from "next";
-
 export const metadata: Metadata = {
   title: "DecorFlow | Luxury Wedding Decoration in Delhi NCR",
 
   description:
-    "DecorFlow creates luxury wedding decorations, floral setups, mandap designs, reception décor, and destination weddings across Delhi NCR.",
+    "DecorFlow offers premium wedding decoration, mandap decoration, floral decor, engagement decoration, reception decor and destination wedding decoration across Delhi NCR.",
 
   keywords: [
     "Wedding Decoration",
     "Wedding Decorator",
-    "Luxury Wedding",
-    "Wedding Planner",
     "Mandap Decoration",
-    "Reception Decoration",
+    "Wedding Planner",
+    "Luxury Wedding Decor",
     "Delhi Wedding Decor",
+    "Noida Wedding Decor",
     "DecorFlow",
   ],
 
-  authors: [
-    {
-      name: "DecorFlow",
-    },
-  ],
+  authors: [{ name: "DecorFlow" }],
 
   creator: "DecorFlow",
 
+  metadataBase: new URL("https://thedecorflow.com"),
+
   openGraph: {
     title: "DecorFlow",
-
     description:
-      "Luxury Wedding Decoration Company",
+      "Luxury Wedding Decoration Services in Delhi NCR",
 
-    images: [
-      "/images/hero.jpg",
-    ],
+    url: "https://thedecorflow.com",
+
+    siteName: "DecorFlow",
+
+    locale: "en_IN",
+
+    type: "website",
   },
 };
 
@@ -56,11 +56,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en">
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }

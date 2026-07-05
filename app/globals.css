@@ -49,3 +49,32 @@ html {
     transform: translateY(0px);
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+::selection {
+  background: #ca8a04;
+  color: white;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8f8f8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ca8a04;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a16207;
+}
+button,
+a,
+input,
+textarea {
+  transition: all 0.3s ease;
+}

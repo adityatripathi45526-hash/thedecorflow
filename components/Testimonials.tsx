@@ -18,7 +18,10 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-24 bg-gray-50">
+   <section
+  id="testimonials"
+  className="py-24 bg-gray-50"
+>
       <div className="max-w-6xl mx-auto px-6">
 
         <div className="text-center mb-16">

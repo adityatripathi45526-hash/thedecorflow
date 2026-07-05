@@ -38,7 +38,7 @@ export default function Navbar() {
         {/* Logo */}
         <a
           href="#"
-          className={`text-3xl font-extrabold tracking-wide transition-all duration-300 ${
+          className={`text-3xl font-extrabold tracking-wide transition-colors duration-300 ${
             scrolled ? "text-yellow-600" : "text-white"
           }`}
         >
@@ -55,12 +55,12 @@ export default function Navbar() {
             <li key={link.name}>
               <a
                 href={link.href}
-                className="relative transition duration-300 hover:text-yellow-500
-                after:absolute after:left-0 after:-bottom-1
-                after:h-[2px] after:w-0
-                after:bg-yellow-500
-                after:transition-all after:duration-300
-                hover:after:w-full"
+                className="relative hover:text-yellow-500 transition-colors duration-300
+                  after:absolute after:left-0 after:-bottom-1
+                  after:h-[2px] after:w-0
+                  after:bg-yellow-500
+                  after:transition-all after:duration-300
+                  hover:after:w-full"
               >
                 {link.name}
               </a>
@@ -71,21 +71,12 @@ export default function Navbar() {
         {/* Desktop Button */}
         <a
           href="#contact"
-          className="hidden md:flex items-center justify-center
-          bg-yellow-500 hover:bg-yellow-600
-          text-white
-          px-6 py-3
-          rounded-full
-          font-semibold
-          shadow-lg
-          hover:shadow-yellow-300/40
-          hover:scale-105
-          transition-all duration-300"
+          className="hidden md:flex items-center justify-center bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-yellow-300/40 hover:scale-105 transition-all duration-300"
         >
           Book Consultation
         </a>
 
-        {/* Mobile Button */}
+        {/* Mobile Menu Button */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className={`md:hidden text-3xl transition-colors ${
@@ -102,16 +93,15 @@ export default function Navbar() {
           menuOpen ? "max-h-[500px]" : "max-h-0"
         }`}
       >
-        <div className="bg-white shadow-2xl">
-
-          <ul className="flex flex-col items-center py-8 gap-6">
+        <div className="bg-white shadow-xl">
+          <ul className="flex flex-col items-center gap-6 py-8">
 
             {navLinks.map((link) => (
               <li key={link.name}>
                 <a
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className="text-gray-700 hover:text-yellow-600 text-lg transition"
+                  className="text-gray-700 hover:text-yellow-600 text-lg transition-colors"
                 >
                   {link.name}
                 </a>
@@ -127,7 +117,6 @@ export default function Navbar() {
             </a>
 
           </ul>
-
         </div>
       </div>
     </nav>
