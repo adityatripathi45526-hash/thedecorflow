@@ -18,46 +18,85 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-   <section
-  id="testimonials"
-  className="py-24 bg-gray-50"
->
-      <div className="max-w-6xl mx-auto px-6">
+    <section
+      id="testimonials"
+      className="py-16 md:py-24 bg-gray-50"
+    >
+      <div className="max-w-7xl mx-auto px-5 md:px-6">
 
-        <div className="text-center mb-16">
-          <p className="uppercase tracking-widest text-yellow-600 font-semibold">
+        {/* Heading */}
+
+        <div className="text-center mb-12 md:mb-16">
+
+          <p className="uppercase tracking-[4px] text-yellow-600 font-semibold text-sm">
             Testimonials
           </p>
 
-          <h2 className="text-5xl font-bold mt-4">
+          <h2 className="text-black md:text-5xl font-bold mt-3">
             What Our Clients Say
           </h2>
 
-          <p className="text-gray-600 mt-6 max-w-2xl mx-auto">
+          <p className="text-gray-600 mt-5 max-w-2xl mx-auto">
             Nothing speaks louder than the experiences of our happy couples.
           </p>
+
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        {/* Cards */}
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
           {testimonials.map((item, index) => (
 
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-lg p-8 hover:-translate-y-2 hover:shadow-2xl transition duration-300"
+              className="
+                bg-white
+                rounded-3xl
+                shadow-lg
+                hover:shadow-2xl
+                hover:-translate-y-2
+                transition-all
+                duration-300
+                p-8
+                flex
+                flex-col
+                h-full
+              "
             >
 
-              <div className="text-yellow-500 text-2xl">
+              {/* Quote */}
+
+              <div className="text-5xl text-yellow-500 leading-none">
+                ❝
+              </div>
+                          {/* Review */}
+
+              <p className="mt-5 text-gray-600 italic leading-7">
+  &ldquo;{item.review}&rdquo;
+</p>
+
+
+              {/* Stars */}
+
+              <div className="mt-4 text-yellow-500 text-lg">
                 ⭐⭐⭐⭐⭐
               </div>
 
-             <p className="mt-6 text-gray-600 italic">
-  &quot;{item.review}&quot;
-</p>
+  
+              {/* Divider */}
 
-              <h3 className="mt-8 text-xl font-bold">
-                {item.name}
-              </h3>
+              <div className="mt-6 border-t border-gray-200 pt-5">
+
+                <h3 className="font-bold text-lg text-gray-900">
+                  {item.name}
+                </h3>
+
+                <p className="text-sm text-gray-500 mt-1">
+                  Happy Couple
+                </p>
+
+              </div>
 
             </div>
 

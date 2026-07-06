@@ -1,175 +1,316 @@
+"use client";
+
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  User,
+  Calendar,
+  IndianRupee,
+  MessageSquare,
+} from "lucide-react";
+
 export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-28 bg-gray-50"
+      className="py-24 bg-gradient-to-b from-gray-50 to-white"
     >
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}
+
         <div className="text-center mb-16">
-          <p className="text-yellow-600 font-semibold uppercase tracking-widest">
+
+          <p className="uppercase tracking-[4px] text-yellow-600 font-semibold">
             Contact Us
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-bold mt-3">
-            Let us Create Your Dream Wedding
+          <h2 className="text-3xl md:text-5xl font-bold mt-4 text-gray-900">
+            Let's Create Your Dream Wedding
           </h2>
 
-          <p className="text-gray-600 mt-5 max-w-2xl mx-auto leading-8">
-            We do love to hear about your wedding plans. Fill out the form below
-            and our team will contact you within 24 hours.
+          <p className="mt-6 text-gray-600 max-w-2xl mx-auto leading-8">
+            We'd love to hear about your wedding plans. Fill in the form and
+            our team will contact you within 24 hours.
           </p>
+
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-14 items-start">
+        <div className="grid lg:grid-cols-2 gap-14">
 
-          {/* LEFT SIDE */}
-          <div className="space-y-8">
+          {/* LEFT */}
 
-            <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-              <h3 className="text-xl font-bold mb-2">📍 Address</h3>
-              <p className="text-gray-600">
-                Gandhidham Post Office (Sub Office)Kachchh, Gujarat, IndiaPin Code: 370201
-              </p>
-            </div>
+          <div className="space-y-6">
 
-            <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-              <h3 className="text-xl font-bold mb-2">📞 Phone</h3>
-              <p className="text-gray-600">
-                +91 8780595775
-              </p>
-            </div>
+            {/* Address */}
 
-            <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-              <h3 className="text-xl font-bold mb-2">📧 Email</h3>
-              <p className="text-gray-600">
-              thedecorflow@gmail.com
-              </p>
-            </div>
+            <div className="bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transition">
 
-            <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-              <h3 className="text-xl font-bold mb-2">🕒 Working Hours</h3>
+              <div className="flex items-start gap-5">
 
-              <p className="text-gray-600">
-                Monday – Sunday
-                <br />
-                9:00 AM – 9:00 PM
-              </p>
-            </div>
+                <div className="w-14 h-14 rounded-full bg-yellow-100 flex items-center justify-center">
 
-          </div>
+                  <MapPin className="text-yellow-600" size={28} />
 
-          {/* RIGHT SIDE */}
-          <div className="bg-white rounded-3xl shadow-2xl p-8">
-
-            <h3 className="text-3xl font-bold text-gray-900">
-              Book a Free Consultation
-            </h3>
-
-            <p className="text-gray-600 mt-2 mb-8">
-              Fill in your details and we will get back to you as soon as possible.
-            </p>
-
-            <form className="space-y-6">
-
-              {/* Name & Email */}
-              <div className="grid md:grid-cols-2 gap-6">
-
-                <div>
-                  <label className="block mb-2 font-medium">
-                    Full Name
-                  </label>
-
-                  <input
-                    type="text"
-                    placeholder="John Doe"
-                    className="w-full rounded-xl border border-gray-300 p-4 outline-none focus:border-yellow-600 focus:ring-2 focus:ring-yellow-200 transition"
-                  />
                 </div>
 
                 <div>
-                  <label className="block mb-2 font-medium">
-                    Email
-                  </label>
 
-                  <input
-                    type="email"
-                    placeholder="john@example.com"
-                    className="w-full rounded-xl border border-gray-300 p-4 outline-none focus:border-yellow-600 focus:ring-2 focus:ring-yellow-200 transition"
-                  />
+                  <h3 className="text-xl font-bold text-gray-900">
+                    Address
+                  </h3>
+
+                  <p className="mt-2 text-gray-600 leading-7">
+                    Gandhidham Post Office (Sub Office)
+                    <br />
+                    Kachchh, Gujarat
+                    <br />
+                    India – 370201
+                  </p>
+
                 </div>
 
               </div>
 
-              {/* Phone & Date */}
-              <div className="grid md:grid-cols-2 gap-6">
+            </div>
 
-                <div>
-                  <label className="block mb-2 font-medium">
-                    Phone Number
-                  </label>
+            {/* Phone */}
 
-                  <input
-                    type="tel"
-                    placeholder="+91 XXXXX XXXXX"
-                    className="w-full rounded-xl border border-gray-300 p-4 outline-none focus:border-yellow-600 focus:ring-2 focus:ring-yellow-200 transition"
-                  />
+            <div className="bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transition">
+
+              <div className="flex items-start gap-5">
+
+                <div className="w-14 h-14 rounded-full bg-yellow-100 flex items-center justify-center">
+
+                  <Phone className="text-yellow-600" size={26} />
+
                 </div>
 
                 <div>
-                  <label className="block mb-2 font-medium">
-                    Wedding Date
-                  </label>
+
+                  <h3 className="text-xl font-bold text-gray-900">
+                    Phone
+                  </h3>
+
+                  <p className="mt-2 text-gray-600">
+                    +91 8780595775
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            {/* Email */}
+
+            <div className="bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transition">
+
+              <div className="flex items-start gap-5">
+
+                <div className="w-14 h-14 rounded-full bg-yellow-100 flex items-center justify-center">
+
+                  <Mail className="text-yellow-600" size={26} />
+
+                </div>
+
+                <div>
+
+                  <h3 className="text-xl font-bold text-gray-900">
+                    Email
+                  </h3>
+
+                  <p className="mt-2 text-gray-600 break-all">
+                    thedecorflow@gmail.com
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            {/* Working Hours */}
+
+            <div className="bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transition">
+
+              <div className="flex items-start gap-5">
+
+                <div className="w-14 h-14 rounded-full bg-yellow-100 flex items-center justify-center">
+
+                  <Clock className="text-yellow-600" size={26} />
+
+                </div>
+
+                <div>
+
+                  <h3 className="text-xl font-bold text-gray-900">
+                    Working Hours
+                  </h3>
+
+                  <p className="mt-2 text-gray-600 leading-7">
+                    Monday – Sunday
+                    <br />
+                    9:00 AM – 9:00 PM
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* RIGHT */}
+
+          <div className="bg-white rounded-[32px] shadow-2xl p-8 md:p-10">
+
+            <h3 className="text-3xl font-bold text-gray-900">
+              Book Free Consultation
+            </h3>
+
+            <p className="text-gray-600 mt-3 mb-8">
+              Fill in your details and we'll contact you shortly.
+            </p>
+
+            <form className="space-y-6">
+
+              <div className="grid md:grid-cols-2 gap-6">
+
+                {/* Full Name */}
+
+                <div className="relative">
+
+                  <User
+                    size={20}
+                    className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
+                  />
+
+                  <input
+                    type="text"
+                    placeholder="Full Name"
+                    className="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-300 text-black placeholder:text-gray-400 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition"
+                  />
+
+                </div>
+
+                {/* Email */}
+
+                <div className="relative">
+
+                  <Mail
+                    size={20}
+                    className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
+                  />
+
+                  <input
+                    type="email"
+                    placeholder="Email Address"
+                    className="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-300 text-black placeholder:text-gray-400 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition"
+                  />
+
+                </div>
+
+              </div>
+                            <div className="grid md:grid-cols-2 gap-6">
+
+                {/* Phone */}
+
+                <div className="relative">
+
+                  <Phone
+                    size={20}
+                    className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
+                  />
+
+                  <input
+                    type="tel"
+                    placeholder="Phone Number"
+                    className="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-300 text-black placeholder:text-gray-400 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition"
+                  />
+
+                </div>
+
+                {/* Wedding Date */}
+
+                <div className="relative">
+
+                  <Calendar
+                    size={20}
+                    className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
+                  />
 
                   <input
                     type="date"
-                    className="w-full rounded-xl border border-gray-300 p-4 outline-none focus:border-yellow-600 focus:ring-2 focus:ring-yellow-200 transition"
+                    className="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-300 text-black focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition"
                   />
+
                 </div>
 
               </div>
 
               {/* Budget */}
-              <div>
 
-                <label className="block mb-2 font-medium">
-                  Estimated Budget
-                </label>
+              <div className="relative">
+
+                <IndianRupee
+                  size={20}
+                  className="absolute left-4 top-5 text-gray-400"
+                />
 
                 <select
-                  className="w-full rounded-xl border border-gray-300 p-4 outline-none focus:border-yellow-600 focus:ring-2 focus:ring-yellow-200 transition"
+                  className="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-300 text-black focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition appearance-none"
                 >
-                  <option>Select Budget</option>
-                  <option>₹50,000 - ₹1,00,000</option>
-                  <option>₹1,00,000 - ₹3,00,000</option>
-                  <option>₹3,00,000 - ₹5,00,000</option>
+                  <option>Select Estimated Budget</option>
+                  <option>₹50,000 – ₹1,00,000</option>
+                  <option>₹1,00,000 – ₹3,00,000</option>
+                  <option>₹3,00,000 – ₹5,00,000</option>
                   <option>₹5,00,000+</option>
                 </select>
 
               </div>
 
               {/* Message */}
-              <div>
 
-                <label className="block mb-2 font-medium">
-                  Your Message
-                </label>
+              <div className="relative">
+
+                <MessageSquare
+                  size={20}
+                  className="absolute left-4 top-5 text-gray-400"
+                />
 
                 <textarea
-                  rows={5}
+                  rows={6}
                   placeholder="Tell us about your dream wedding..."
-                  className="w-full rounded-xl border border-gray-300 p-4 outline-none focus:border-yellow-600 focus:ring-2 focus:ring-yellow-200 transition"
-                ></textarea>
+                  className="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-300 text-black placeholder:text-gray-400 resize-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition"
+                />
 
               </div>
 
               {/* Button */}
+
               <button
                 type="submit"
-                className="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-4 rounded-xl text-lg font-semibold shadow-xl hover:scale-[1.02] transition-all duration-300"
+                className="
+                  w-full
+                  bg-yellow-500
+                  hover:bg-yellow-600
+                  text-white
+                  py-4
+                  rounded-2xl
+                  text-lg
+                  font-semibold
+                  shadow-xl
+                  hover:shadow-yellow-300/40
+                  hover:scale-[1.02]
+                  transition-all
+                  duration-300
+                "
               >
-                Send Inquiry
+                Book Free Consultation →
               </button>
 
             </form>
@@ -178,29 +319,32 @@ export default function Contact() {
 
         </div>
 
+        {/* Google Map */}
+
+        <div className="mt-20">
+
+          <h3 className="text-3xl font-bold text-center text-gray-900 mb-8">
+            Find Us
+          </h3>
+
+          <div className="overflow-hidden rounded-3xl shadow-2xl">
+
+            <iframe
+              src="https://www.google.com/maps?q=Gandhidham%20Post%20Office,%20Kachchh,%20Gujarat%20370201&output=embed"
+              width="100%"
+              height="450"
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+              className="border-0"
+            />
+
+          </div>
+
+        </div>
+
       </div>
-      {/* Google Map */}
 
-<div className="mt-20">
-
-  <h3 className="text-3xl font-bold text-center mb-8">
-    Find Us
-  </h3>
-
-  <div className="rounded-2xl overflow-hidden shadow-xl">
-
-    <iframe
-      src="https://www.google.com/maps?q=Gandhidham%20Post%20Office,%20Kachchh,%20Gujarat%20370201&output=embed"
-      width="100%"
-      height="450"
-      loading="lazy"
-      allowFullScreen
-      referrerPolicy="no-referrer-when-downgrade"
-    />
-
-  </div>
-
-</div>
     </section>
   );
 }
