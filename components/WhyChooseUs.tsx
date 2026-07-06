@@ -40,7 +40,8 @@ export default function WhyChooseUs() {
             Why Choose Us
           </p>
 
-          <h2 className="text-3xl md:text-5xl font-bold mt-3 leading-tight">
+          <h2 className="text-black
+          -3xl md:text-5xl font-bold mt-3 leading-tight">
             We Make Weddings
             <br className="md:hidden" />
             Truly Memorable

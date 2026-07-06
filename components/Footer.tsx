@@ -27,12 +27,14 @@ export default function Footer() {
 
           <div className="flex gap-4 mt-8">
 
+          
             <a
-              href="#"
-              className="w-11 h-11 rounded-full bg-white/10 hover:bg-yellow-500 transition flex items-center justify-center"
-            >
-              <FaInstagram />
-            </a>
+  href="https://www.instagram.com/thedecorflow_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <FaInstagram />
+</a>
 
             <a
               href="#"
@@ -42,7 +44,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="#"
+            href="https://wa.me/918780595775"
               className="w-11 h-11 rounded-full bg-white/10 hover:bg-yellow-500 transition flex items-center justify-center"
             >
               <FaWhatsapp />
