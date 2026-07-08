@@ -1,5 +1,7 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 import {
   MapPin,
   Phone,
@@ -12,339 +14,308 @@ import {
 } from "lucide-react";
 
 export default function Contact() {
+
   return (
+
     <section
       id="contact"
-      className="py-24 bg-gradient-to-b from-gray-50 to-white"
+      className="relative py-32 bg-[#FAF7F2] overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-6">
+
+      {/* Background */}
+
+      <div className="absolute -top-32 left-0 w-[450px] h-[450px] rounded-full bg-[#D4AF37]/10 blur-[140px]" />
+
+      <div className="absolute bottom-0 right-0 w-[450px] h-[450px] rounded-full bg-[#A67C52]/10 blur-[140px]" />
+
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
         {/* Heading */}
 
-        <div className="text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: .8 }}
+          className="text-center mb-24"
+        >
 
-          <p className="uppercase tracking-[4px] text-yellow-600 font-semibold">
-            Contact Us
-          </p>
+          <span className="inline-block rounded-full bg-[#D4AF37]/15 px-5 py-2 text-sm tracking-[0.3em] uppercase font-semibold text-[#A67C52]">
 
-          <h2 className="text-3xl md:text-5xl font-bold mt-4 text-gray-900">
-            Let's Create Your Dream Wedding
+            Contact DecorFlow
+
+          </span>
+
+          <h2
+            className="mt-8 text-5xl lg:text-6xl text-[#1E1E1E]"
+            style={{
+              fontFamily: "var(--font-heading)",
+            }}
+          >
+
+            Let us Create Your
+            <span className="italic text-[#A67C52]">
+
+              {" "}Dream Wedding
+
+            </span>
+
           </h2>
 
-          <p className="mt-6 text-gray-600 max-w-2xl mx-auto leading-8">
-            We'd love to hear about your wedding plans. Fill in the form and
-            our team will contact you within 24 hours.
+          <p className="mt-8 max-w-3xl mx-auto text-lg leading-9 text-gray-600">
+
+            We do love to hear about your celebration.
+            Share your vision with us and our wedding experts
+            will contact you within 24 hours.
+
           </p>
 
-        </div>
+        </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-14">
+        <div className="grid lg:grid-cols-[420px_1fr] gap-14">
 
-          {/* LEFT */}
+          {/* LEFT INFO */}
 
-          <div className="space-y-6">
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: .8 }}
+            className="space-y-8"
+          >
 
-            {/* Address */}
+                  {/* Contact Cards */}
 
-            <div className="bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transition">
+          {[
+            {
+              icon: <MapPin size={24} />,
+              title: "Visit Us",
+              text: "Gandhidham, Kachchh\nGujarat 370201",
+            },
+            {
+              icon: <Phone size={24} />,
+              title: "Call Us",
+              text: "+91 8780595775",
+            },
+            {
+              icon: <Mail size={24} />,
+              title: "Email",
+              text: "thedecorflow@gmail.com",
+            },
+            {
+              icon: <Clock size={24} />,
+              title: "Working Hours",
+              text: "Mon - Sun\n9:00 AM - 9:00 PM",
+            },
+          ].map((item, index) => (
 
-              <div className="flex items-start gap-5">
+            <motion.div
+              key={item.title}
+              whileHover={{ y: -8 }}
+              transition={{ duration: .35 }}
+              className="rounded-[28px] bg-white/80 backdrop-blur-xl border border-white/40 shadow-[0_20px_60px_rgba(0,0,0,.08)] p-8"
+            >
 
-                <div className="w-14 h-14 rounded-full bg-yellow-100 flex items-center justify-center">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#D4AF37] to-[#A67C52] flex items-center justify-center text-white shadow-xl">
 
-                  <MapPin className="text-yellow-600" size={28} />
-
-                </div>
-
-                <div>
-
-                  <h3 className="text-xl font-bold text-gray-900">
-                    Address
-                  </h3>
-
-                  <p className="mt-2 text-gray-600 leading-7">
-                    Gandhidham Post Office (Sub Office)
-                    <br />
-                    Kachchh, Gujarat
-                    <br />
-                    India – 370201
-                  </p>
-
-                </div>
-
-              </div>
-
-            </div>
-
-            {/* Phone */}
-
-            <div className="bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transition">
-
-              <div className="flex items-start gap-5">
-
-                <div className="w-14 h-14 rounded-full bg-yellow-100 flex items-center justify-center">
-
-                  <Phone className="text-yellow-600" size={26} />
-
-                </div>
-
-                <div>
-
-                  <h3 className="text-xl font-bold text-gray-900">
-                    Phone
-                  </h3>
-
-                  <p className="mt-2 text-gray-600">
-                    +91 8780595775
-                  </p>
-
-                </div>
+                {item.icon}
 
               </div>
 
-            </div>
+              <h3
+                className="mt-6 text-2xl text-[#1E1E1E]"
+                style={{ fontFamily: "var(--font-heading)" }}
+              >
+                {item.title}
+              </h3>
 
-            {/* Email */}
+              <p className="mt-3 whitespace-pre-line text-gray-600 leading-8">
 
-            <div className="bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transition">
+                {item.text}
 
-              <div className="flex items-start gap-5">
+              </p>
 
-                <div className="w-14 h-14 rounded-full bg-yellow-100 flex items-center justify-center">
+            </motion.div>
 
-                  <Mail className="text-yellow-600" size={26} />
+          ))}
 
-                </div>
+          </motion.div>
 
-                <div>
+          {/* Contact Form */}
 
-                  <h3 className="text-xl font-bold text-gray-900">
-                    Email
-                  </h3>
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: .8 }}
+            className="rounded-[40px] bg-white/80 backdrop-blur-xl border border-white/40 shadow-[0_30px_80px_rgba(0,0,0,.08)] p-10 lg:p-14"
+          >
 
-                  <p className="mt-2 text-gray-600 break-all">
-                    thedecorflow@gmail.com
-                  </p>
+            <h3
+              className="text-4xl text-[#1E1E1E]"
+              style={{ fontFamily: "var(--font-heading)" }}
+            >
 
-                </div>
-
-              </div>
-
-            </div>
-
-            {/* Working Hours */}
-
-            <div className="bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transition">
-
-              <div className="flex items-start gap-5">
-
-                <div className="w-14 h-14 rounded-full bg-yellow-100 flex items-center justify-center">
-
-                  <Clock className="text-yellow-600" size={26} />
-
-                </div>
-
-                <div>
-
-                  <h3 className="text-xl font-bold text-gray-900">
-                    Working Hours
-                  </h3>
-
-                  <p className="mt-2 text-gray-600 leading-7">
-                    Monday – Sunday
-                    <br />
-                    9:00 AM – 9:00 PM
-                  </p>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          {/* RIGHT */}
-
-          <div className="bg-white rounded-[32px] shadow-2xl p-8 md:p-10">
-
-            <h3 className="text-3xl font-bold text-gray-900">
               Book Free Consultation
+
             </h3>
 
-            <p className="text-gray-600 mt-3 mb-8">
-              Fill in your details and we'll contact you shortly.
+            <p className="mt-4 text-gray-600 leading-8">
+
+              Tell us about your wedding and we will prepare a personalized decoration proposal.
+
             </p>
 
-            <form className="space-y-6">
+            <form className="mt-10 space-y-7">
 
               <div className="grid md:grid-cols-2 gap-6">
 
-                {/* Full Name */}
+                <Input icon={<User size={18} />} placeholder="Full Name" />
 
-                <div className="relative">
-
-                  <User
-                    size={20}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
-                  />
-
-                  <input
-                    type="text"
-                    placeholder="Full Name"
-                    className="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-300 text-black placeholder:text-gray-400 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition"
-                  />
-
-                </div>
-
-                {/* Email */}
-
-                <div className="relative">
-
-                  <Mail
-                    size={20}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
-                  />
-
-                  <input
-                    type="email"
-                    placeholder="Email Address"
-                    className="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-300 text-black placeholder:text-gray-400 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition"
-                  />
-
-                </div>
-
-              </div>
-                            <div className="grid md:grid-cols-2 gap-6">
-
-                {/* Phone */}
-
-                <div className="relative">
-
-                  <Phone
-                    size={20}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
-                  />
-
-                  <input
-                    type="tel"
-                    placeholder="Phone Number"
-                    className="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-300 text-black placeholder:text-gray-400 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition"
-                  />
-
-                </div>
-
-                {/* Wedding Date */}
-
-                <div className="relative">
-
-                  <Calendar
-                    size={20}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
-                  />
-
-                  <input
-                    type="date"
-                    className="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-300 text-black focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition"
-                  />
-
-                </div>
+                <Input icon={<Mail size={18} />} placeholder="Email Address" type="email" />
 
               </div>
 
-              {/* Budget */}
+              <div className="grid md:grid-cols-2 gap-6">
 
-              <div className="relative">
+                <Input icon={<Phone size={18} />} placeholder="Phone Number" />
 
-                <IndianRupee
-                  size={20}
-                  className="absolute left-4 top-5 text-gray-400"
-                />
-
-                <select
-                  className="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-300 text-black focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition appearance-none"
-                >
-                  <option>Select Estimated Budget</option>
-                  <option>₹50,000 – ₹1,00,000</option>
-                  <option>₹1,00,000 – ₹3,00,000</option>
-                  <option>₹3,00,000 – ₹5,00,000</option>
-                  <option>₹5,00,000+</option>
-                </select>
+                <Input icon={<Calendar size={18} />} type="date" />
 
               </div>
 
-              {/* Message */}
+              <SelectInput />
 
-              <div className="relative">
-
-                <MessageSquare
-                  size={20}
-                  className="absolute left-4 top-5 text-gray-400"
-                />
-
-                <textarea
-                  rows={6}
-                  placeholder="Tell us about your dream wedding..."
-                  className="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-300 text-black placeholder:text-gray-400 resize-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 outline-none transition"
-                />
-
-              </div>
-
-              {/* Button */}
+              <TextArea />
 
               <button
-                type="submit"
-                className="
-                  w-full
-                  bg-yellow-500
-                  hover:bg-yellow-600
-                  text-white
-                  py-4
-                  rounded-2xl
-                  text-lg
-                  font-semibold
-                  shadow-xl
-                  hover:shadow-yellow-300/40
-                  hover:scale-[1.02]
-                  transition-all
-                  duration-300
-                "
+                className="w-full rounded-full bg-gradient-to-r from-[#D4AF37] to-[#A67C52] py-5 text-lg font-semibold text-white shadow-xl hover:scale-[1.02] transition"
               >
+
                 Book Free Consultation →
+
               </button>
 
             </form>
 
-          </div>
+          </motion.div>
 
         </div>
 
         {/* Google Map */}
 
-        <div className="mt-20">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: .8 }}
+          className="mt-24"
+        >
 
-          <h3 className="text-3xl font-bold text-center text-gray-900 mb-8">
-            Find Us
-          </h3>
-
-          <div className="overflow-hidden rounded-3xl shadow-2xl">
+          <div className="rounded-[36px] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,.12)] border border-white">
 
             <iframe
               src="https://www.google.com/maps?q=Gandhidham%20Post%20Office,%20Kachchh,%20Gujarat%20370201&output=embed"
               width="100%"
-              height="450"
+              height="520"
               loading="lazy"
               allowFullScreen
-              referrerPolicy="no-referrer-when-downgrade"
               className="border-0"
             />
 
           </div>
 
-        </div>
+        </motion.div>
 
       </div>
 
     </section>
+
   );
+}
+
+/* ---------------- Components ---------------- */
+
+import { InputHTMLAttributes, ReactNode } from "react";
+
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+  icon: ReactNode;
+}
+
+function Input({
+  icon,
+  ...props
+}: InputProps) {
+
+  return (
+
+    <div className="relative">
+
+      <div className="absolute left-5 top-1/2 -translate-y-1/2 text-[#A67C52]">
+
+        {icon}
+
+      </div>
+
+      <input
+        {...props}
+        className="w-full rounded-2xl border border-[#D4AF37]/20 bg-[#FFFDF9] py-4 pl-14 pr-5 text-[#1E1E1E] outline-none transition focus:border-[#D4AF37] focus:ring-4 focus:ring-[#D4AF37]/10"
+      />
+
+    </div>
+
+  );
+
+}
+
+function SelectInput() {
+
+  return (
+
+    <div className="relative">
+
+      <IndianRupee
+        size={18}
+        className="absolute left-5 top-5 text-[#A67C52]"
+      />
+
+      <select
+        className="w-full rounded-2xl border border-[#D4AF37]/20 bg-[#FFFDF9] py-4 pl-14 pr-5 outline-none focus:border-[#D4AF37] focus:ring-4 focus:ring-[#D4AF37]/10"
+      >
+
+        <option>Select Wedding Budget</option>
+        <option>₹50,000 - ₹1,00,000</option>
+        <option>₹1,00,000 - ₹3,00,000</option>
+        <option>₹3,00,000 - ₹5,00,000</option>
+        <option>₹5,00,000+</option>
+
+      </select>
+
+    </div>
+
+  );
+
+}
+
+function TextArea() {
+
+  return (
+
+    <div className="relative">
+
+      <MessageSquare
+        size={18}
+        className="absolute left-5 top-5 text-[#A67C52]"
+      />
+
+      <textarea
+        rows={6}
+        placeholder="Tell us about your dream wedding..."
+        className="w-full resize-none rounded-2xl border border-[#D4AF37]/20 bg-[#FFFDF9] py-4 pl-14 pr-5 outline-none transition focus:border-[#D4AF37] focus:ring-4 focus:ring-[#D4AF37]/10"
+      />
+
+    </div>
+
+  );
+
 }

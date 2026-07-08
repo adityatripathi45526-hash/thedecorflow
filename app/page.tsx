@@ -15,17 +15,10 @@ import Button from "@/components/Button";
 import ScrollProgress from "@/components/ScrollProgress";
 import BackToTop from "@/components/BackToTop";
 
-
-
-
-export default function Home(){
+export default function Home() {
   return (
     <>
-    <>
-  <ScrollProgress />
-  <Navbar />
-  ...
-</>
+      <ScrollProgress />
       <Navbar />
       <Hero />
       <Stats />
@@ -35,10 +28,12 @@ export default function Home(){
       <WhyChooseUs />
       <Testimonials />
       <FAQ />
-      <Footer />
       <CTA />
-      <Contact/>
+      <Contact />
+      <Footer />
+
       <Button>Book Consultation</Button>
+
       <BackToTop />
       <WhatsAppButton />
     </>
