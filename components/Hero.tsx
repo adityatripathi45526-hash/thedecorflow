@@ -50,7 +50,7 @@ export default function Hero() {
 
             {/* Premium Badge */}
 
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: .3 }}
@@ -65,7 +65,7 @@ export default function Hero() {
 
               </span>
 
-            </motion.div>
+            </motion.div> */}
 
             {/* Heading */}
 

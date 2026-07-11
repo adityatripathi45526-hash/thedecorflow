@@ -107,7 +107,7 @@ export default function Contact() {
               title: "Working Hours",
               text: "Mon - Sun\n9:00 AM - 9:00 PM",
             },
-          ].map((item, index) => (
+          ].map((item) => (
 
             <motion.div
               key={item.title}

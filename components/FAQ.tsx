@@ -28,9 +28,9 @@ const faqs = [
   {
     question: "Which cities do you serve?",
     answer:
-      "We primarily serve Delhi NCR, Noida, Ghaziabad, Gurugram and also undertake destination wedding projects across India.",
+      "We primarily serve near Gandhidhan and Ahemdabad,also undertake destination wedding projects across India.",
   },
-];
+]
 
 export default function FAQ() {
 

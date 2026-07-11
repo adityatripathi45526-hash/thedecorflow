@@ -1,3 +1,8 @@
+"use client";
+
+import { useEffect,useState } from "react";
+import LoadingScreen from "@/components/LoadingScreen";
+
 import FAQ from "@/components/FAQ";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -16,8 +21,25 @@ import ScrollProgress from "@/components/ScrollProgress";
 import BackToTop from "@/components/BackToTop";
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
+
+useEffect(() => {
+  const timer = setTimeout(() => {
+    setLoading(false);
+  }, 3500);
+
+  return () => clearTimeout(timer);
+}, []);
+
   return (
     <>
+  <LoadingScreen loading={loading} />
+
+  <div
+    className={`transition-opacity duration-1000 ${
+      loading ? "opacity-0" : "opacity-100"
+    }`}
+  >
       <ScrollProgress />
       <Navbar />
       <Hero />
@@ -28,14 +50,14 @@ export default function Home() {
       <WhyChooseUs />
       <Testimonials />
       <FAQ />
-      <CTA />
       <Contact />
+      <CTA />
       <Footer />
-
-      <Button>Book Consultation</Button>
+      {/* <Button>THE DECOR FLOW</Button> */}
 
       <BackToTop />
       <WhatsAppButton />
+      </div>
     </>
   );
 }

@@ -37,7 +37,7 @@ export default function About() {
             {/* Main Image */}
 
             <Image
-              src="/images/about1.png"
+              src="/images/about2.jpg"
               alt="DecorFlow Wedding Decoration"
               width={650}
               height={700}

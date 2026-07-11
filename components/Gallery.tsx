@@ -1,33 +1,33 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaExpandArrowsAlt } from "react-icons/fa";
 
 const gallery = [
   {
-    image: "/images/gallery/1.png",
+    image: "/images/gallery/stage44.jpg",
     title: "Royal Stage Decoration",
   },
   {
-    image: "/images/gallery/2.png",
+    image: "/images/gallery/mandap.jpg",
     title: "Luxury Mandap",
   },
   {
-    image: "/images/gallery/3.png",
+    image: "/images/gallery/Floral Entrance1.jpeg",
     title: "Floral Entrance",
   },
   {
-    image: "/images/gallery/4.png",
-    title: "Reception Setup",
+    image: "/images/gallery/mehndi.jpg",
+    title: "Mehndi Decoration",
   },
   {
-    image: "/images/gallery/5.png",
+    image: "/images/gallery/haldi2.jpg",
     title: "Haldi Decoration",
   },
   {
-    image: "/images/gallery/6.png",
+    image: "/images/gallery/aisle.jpg",
     title: "Wedding Aisle",
   },
 ];
@@ -39,7 +39,7 @@ export default function Gallery() {
 
   const closeGallery = () => setSelectedIndex(null);
 
-  const previousImage = () => {
+  const previousImage = useCallback(() => {
     if (selectedIndex === null) return;
 
     setSelectedIndex(
@@ -47,9 +47,9 @@ export default function Gallery() {
         ? gallery.length - 1
         : selectedIndex - 1
     );
-  };
+  }, [selectedIndex]);
 
-  const nextImage = () => {
+  const nextImage = useCallback(() => {
     if (selectedIndex === null) return;
 
     setSelectedIndex(
@@ -57,7 +57,7 @@ export default function Gallery() {
         ? 0
         : selectedIndex + 1
     );
-  };
+ }, [selectedIndex]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -82,7 +82,7 @@ export default function Gallery() {
         handleKeyDown
       );
 
-  }, [selectedIndex]);
+ }, [selectedIndex, previousImage, nextImage]);
 
   return (
 

@@ -6,12 +6,13 @@ import {
   FaClock,
   FaPalette,
   FaHeart,
+  FaHandRock,
 } from "react-icons/fa";
 
 const features = [
   {
     icon: <FaAward />,
-    title: "Premium Quality",
+    title: "Premium Quality Florals",
     description:
       "Luxury wedding decorations crafted with exceptional attention to detail and premium materials.",
   },
@@ -23,15 +24,21 @@ const features = [
   },
   {
     icon: <FaPalette />,
-    title: "Customized Themes",
+    title: "Custom Concepts",
     description:
       "Every wedding is unique. We create personalized décor concepts tailored to your vision.",
   },
   {
     icon: <FaHeart />,
-    title: "Client Satisfaction",
+    title: "Complete Event Management",
     description:
       "Our biggest achievement is creating unforgettable memories for every couple we serve.",
+  },
+   {
+    icon: <FaHandRock />,
+    title: "Dedacated Design Team",
+    description:
+      "We work hard so that you can't forgot your memories.",
   },
 ];
 
@@ -62,7 +69,7 @@ export default function WhyChooseUs() {
 
           <span className="inline-block rounded-full bg-[#D4AF37]/15 px-5 py-2 text-sm tracking-[0.3em] uppercase font-semibold text-[#A67C52]">
 
-            Why Choose DecorFlow
+            Why Choose The Decor Flow
 
           </span>
 

@@ -10,6 +10,7 @@ import {
   FaPhoneAlt,
   FaMapMarkerAlt,
   FaArrowRight,
+  FaPhone,
 } from "react-icons/fa";
 
 export default function Footer() {
@@ -75,10 +76,10 @@ export default function Footer() {
               </a>
 
               <a
-                href="#"
+                href="tel:+918780595775"
                 className="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#D4AF37] hover:text-black transition-all duration-300 hover:scale-110"
               >
-                <FaFacebookF size={16} />
+                <FaPhoneAlt size={16} />
               </a>
 
               <a

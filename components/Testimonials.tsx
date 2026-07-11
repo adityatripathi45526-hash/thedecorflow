@@ -9,19 +9,19 @@ import {
 const testimonials = [
   {
     name: "Priya & Rahul",
-    location: "Delhi NCR",
+    location: "Jamnagar",
     review:
       "DecorFlow transformed our wedding into a royal celebration. Every guest appreciated the luxurious decoration and flawless execution.",
   },
   {
     name: "Anjali & Karan",
-    location: "Noida",
+    location: "Ahemdabad",
     review:
       "The team was highly professional, punctual and incredibly creative. Every floral arrangement looked breathtaking.",
   },
   {
     name: "Sneha & Aman",
-    location: "Ghaziabad",
+    location: "Gandhidham",
     review:
       "From planning to execution everything exceeded our expectations. We couldn't have asked for a better decoration partner.",
   },
