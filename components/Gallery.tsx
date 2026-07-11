@@ -7,27 +7,27 @@ import { FaExpandArrowsAlt } from "react-icons/fa";
 
 const gallery = [
   {
-    image: "/images/gallery/stage44.jpg",
+    image: "/images/Gallery/stage44.jpg",
     title: "Royal Stage Decoration",
   },
   {
-    image: "/images/gallery/mandap.jpg",
+    image: "/images/Gallery/mandap.jpg",
     title: "Luxury Mandap",
   },
   {
-    image: "/images/gallery/Floral Entrance1.jpeg",
+    image: "/images/Gallery/Floral Entrance1.jpeg",
     title: "Floral Entrance",
   },
   {
-    image: "/images/gallery/mehndi.jpg",
+    image: "/images/Gallery/mehndi.jpg",
     title: "Mehndi Decoration",
   },
   {
-    image: "/images/gallery/haldi2.jpg",
+    image: "/images/Gallery/haldi2.jpg",
     title: "Haldi Decoration",
   },
   {
-    image: "/images/gallery/aisle.jpg",
+    image: "/images/Gallery/aisle.jpg",
     title: "Wedding Aisle",
   },
 ];
